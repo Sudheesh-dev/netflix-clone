@@ -1,0 +1,110 @@
+.banner {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+.bannerImage {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  z-index: 500;
+}
+.bannerGradient {
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  top: 0px;
+  z-index: 600;
+  background-image: linear-gradient(
+    to top,
+    rgb(14, 14, 14),
+    rgba(255, 15, 15, 0),
+    rgba(255, 15, 15, 0)
+  );
+}
+.bannerInfo {
+  height: 75vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  z-index: 1000;
+}
+
+.bannerInfo > h1 {
+  color: whitesmoke;
+  font-size: 50px;
+}
+.bannerButton {
+  padding: 9px 25px;
+  font-weight: 700;
+  margin: 10px 20px 10px 0px;
+  border-radius: 4px;
+  background-color: rgba(19, 19, 19, 0.603);
+  border: none;
+  outline: none;
+  color: whitesmoke;
+}
+.bannerButton:hover {
+  cursor: pointer;
+  background-color: rgba(245, 245, 245, 0.596);
+  color: rgb(15, 15, 15);
+}
+.bannerDescription {
+  width: 599px;
+  color: whitesmoke;
+}
+@media screen and (max-width: 650px) {
+  .banner {
+    height: 370px;
+  }
+  .bannerImage {
+    height: 370px;
+  }
+  .bannerGradient {
+    height: 370px;
+  }
+  .bannerInfo {
+    height: 310px;
+    padding-left: 10px;
+    justify-content: flex-end;
+  }
+  .bannerInfo > h1 {
+    font-size: 38px;
+  }
+  .bannerButton {
+    padding: 7px 15px;
+  }
+  .bannerDescription {
+    max-height: 120px;
+    font-size: 14px;
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .bannerInfo {
+    height: 310px;
+    padding-left: 10px;
+    margin-top: 30px;
+    justify-content: flex-end;
+  }
+  .bannerInfo > h1 {
+    font-size: 33px;
+  }
+  .bannerDescription {
+    padding-bottom: 10px;
+    max-height: 80px;
+    overflow: auto;
+  }
+  .bannerDescription::-webkit-scrollbar {
+    display: none; /* Chrome, Safari , Opera*/
+  }
+  .bannerDescription {
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+  }
+}

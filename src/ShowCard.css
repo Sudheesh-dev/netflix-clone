@@ -1,0 +1,28 @@
+.showCardImage {
+  width: 180px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0px 6px;
+  transition: ease-out 200ms;
+}
+.showCardImage:hover {
+  transform: scale(1.13);
+  cursor: pointer;
+}
+@media screen and (max-width: 650px) {
+  .showCardImage:hover {
+    transform: scale(1.06);
+  }
+}
+@media screen and (max-width: 475px) {
+  .showCardImage {
+    width: 250px;
+    height: 380px;
+    object-fit: cover;
+    margin: 0px 6px;
+    transition: ease-out 200ms;
+  }
+  .showCardImage:hover {
+    transform: scale(1);
+  }
+}
