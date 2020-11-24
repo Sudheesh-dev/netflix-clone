@@ -10,7 +10,7 @@ function Shows() {
     const [trailerLoading, settrailerLoading] = useState(false)
     const [previousMovie, setPreviousMovie] = useState(null)
     
-    const showTrailerHandler=async(movie)=>{      
+    const showTrailerHandler=(movie)=>{      
         if (trailerID && movie.title?movie.title:movie.original_name == previousMovie){
             setPreviousMovie(null)
             setTrailerID(null)
